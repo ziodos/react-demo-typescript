@@ -1,10 +1,10 @@
-import { useState } from "react";
-import useDebounce from "../../hooks/useDebounce";
-import AlbumSearch from "./AlbumSearch";
+import { useState } from 'react'
+import useDebounce from '../../hooks/useDebounce'
+import AlbumSearch from './AlbumSearch'
 
 const AlbumList = () => {
-    const [searchTerm, setSearchTerm] = useState("");
-    const debouncedSearchTerm = useDebounce(searchTerm, 500);
+    const [searchTerm, setSearchTerm] = useState('')
+    const debouncedSearchTerm = useDebounce(searchTerm, 500)
 
     return (
         <>
@@ -20,7 +20,7 @@ const AlbumList = () => {
 
             <AlbumSearch searchTerm={debouncedSearchTerm} />
         </>
-    );
-};
+    )
+}
 
-export default AlbumList;
+export default AlbumList

@@ -70,5 +70,8 @@
         "husky": "^8.0.3",
         "lint-staged": "^13.2.0",
         "typescript": "^5.0.2"
+    },
+    "overrides": {
+        "typescript": "^5.0.2"
     }
 }

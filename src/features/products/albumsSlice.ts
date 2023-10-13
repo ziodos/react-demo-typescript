@@ -1,15 +1,15 @@
-import { apiSlice } from "../../api/apiSlice";
-import { Product, ExtraResponse } from "../../types";
+import { apiSlice } from '../../api/apiSlice'
+import { Product, ExtraResponse } from '../../types'
 
 interface ProductsResponse {
-    products: Product[];
-    options: ExtraResponse;
+    products: Product[]
+    options: ExtraResponse
 }
 
 export const usersApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         getProducts: builder.query<Product[], void>({
-            query: () => "/products",
+            query: () => '/products',
             transformResponse: (response: ProductsResponse) =>
                 response.products,
         }),
@@ -22,10 +22,10 @@ export const usersApiSlice = apiSlice.injectEndpoints({
                 response.products,
         }),
     }),
-});
+})
 
 export const {
     useGetProductsQuery,
     useGetProductByIdQuery,
     useSearchProductsQuery,
-} = usersApiSlice;
+} = usersApiSlice
